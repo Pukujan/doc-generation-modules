@@ -2,6 +2,8 @@
  * HTML ships a static skeleton (terms + file paths) so observe gates see content
  * even if scripts have not finished. Script then sync-refreshes from JSON and
  * sets data-dgm-ready / data-loaded=true.
+ * A compact header file-path strip keeps at least one path in the Ultrafast
+ * viewport (snapshot.js only joins text intersecting the viewport).
  */
 (function () {
   "use strict";
@@ -12,6 +14,30 @@
 
   function setReady(ready) {
     document.documentElement.setAttribute("data-dgm-ready", ready ? "true" : "false");
+  }
+
+  function renderFileStrip(files) {
+    const strip = document.getElementById("file-path-strip");
+    if (!strip) return;
+    const paths = (files || []).map(function (f) { return f.path; }).filter(Boolean);
+    strip.textContent = "";
+    const label = document.createElement("span");
+    label.className = "strip-label";
+    label.textContent = "Paths:";
+    strip.appendChild(label);
+    if (!paths.length) {
+      strip.appendChild(document.createTextNode(" (none)"));
+      return;
+    }
+    paths.slice(0, 4).forEach(function (path, i) {
+      if (i) strip.appendChild(document.createTextNode(" · "));
+      const code = document.createElement("code");
+      code.textContent = path;
+      strip.appendChild(code);
+    });
+    if (paths.length > 4) {
+      strip.appendChild(document.createTextNode(" · +" + (paths.length - 4) + " more"));
+    }
   }
 
   function render(data, glossaryRoot, filesRoot) {
@@ -36,6 +62,7 @@
       li.appendChild(role);
       filesRoot.appendChild(li);
     });
+    renderFileStrip(data.files || []);
     glossaryRoot.setAttribute("data-loaded", "true");
     filesRoot.setAttribute("data-loaded", "true");
     setReady(true);

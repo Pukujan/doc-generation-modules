@@ -12,15 +12,17 @@ body {
   font-family: "Segoe UI", system-ui, sans-serif;
   color: var(--ink);
   background: var(--bg);
-  line-height: 1.5;
+  line-height: 1.4;
 }
 .site-header, main, footer, .feature-header {
   max-width: 52rem;
   margin: 0 auto;
-  padding: 1.25rem 1rem;
+  padding: 0.75rem 1rem;
 }
+.feature-header { padding-bottom: 0.35rem; }
+.feature-header h1 { margin: 0.15rem 0 0.25rem; font-size: 1.45rem; }
 .eyebrow { text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); font-size: 0.75rem; }
-.lede { color: var(--muted); }
+.lede { color: var(--muted); margin: 0.2rem 0; font-size: 0.95rem; }
 .gate-note {
   background: #fff7e6;
   border: 1px solid #f0d9a8;
@@ -37,20 +39,49 @@ body {
 .card h3 { margin: 0 0 0.35rem; }
 .card a { color: var(--accent); }
 .citations { margin: 0.5rem 0 0; padding-left: 1.1rem; }
-.glossary dt { font-weight: 600; margin-top: 0.75rem; }
-.glossary dd { margin: 0.15rem 0 0; color: var(--muted); }
-.file-list { list-style: none; padding: 0; }
+main h2 { margin: 0.6rem 0 0.35rem; font-size: 1.1rem; }
+.glossary {
+  display: grid;
+  grid-template-columns: minmax(7rem, 11rem) 1fr;
+  gap: 0.2rem 0.75rem;
+  margin: 0;
+}
+.glossary dt { font-weight: 600; margin: 0; }
+.glossary dd { margin: 0; color: var(--muted); font-size: 0.92rem; }
+.file-list { list-style: none; padding: 0; margin: 0; }
 .file-list li {
   display: flex;
   gap: 0.75rem;
   justify-content: space-between;
   border-bottom: 1px solid var(--border);
-  padding: 0.45rem 0;
+  padding: 0.3rem 0;
   font-family: ui-monospace, Consolas, monospace;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
 }
 .file-list .role { color: var(--muted); font-family: "Segoe UI", system-ui, sans-serif; }
-.back-link { display: inline-block; margin-bottom: 0.75rem; }
-.feature-sections { color: var(--muted); font-size: 0.85rem; margin: 0.25rem 0 0; }
+.back-link { display: inline-block; margin-bottom: 0.35rem; }
+.feature-sections { color: var(--muted); font-size: 0.85rem; margin: 0.15rem 0 0; }
+.feature-file-strip {
+  margin: 0.35rem 0 0;
+  padding: 0.4rem 0.55rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--card);
+  font-family: ui-monospace, Consolas, monospace;
+  font-size: 0.8rem;
+  line-height: 1.35;
+  color: var(--ink);
+}
+.feature-file-strip .strip-label {
+  font-family: "Segoe UI", system-ui, sans-serif;
+  color: var(--muted);
+  font-size: 0.75rem;
+  margin-right: 0.35rem;
+}
+.feature-file-strip code {
+  font-family: inherit;
+  background: transparent;
+  padding: 0;
+}
 html[data-dgm-ready="false"] .glossary,
 html[data-dgm-ready="false"] .file-list { min-height: 1.5rem; }

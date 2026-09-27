@@ -10,27 +10,28 @@
   <header class="feature-header">
     <a class="back-link" href="../index.html" data-testid="back-to-register">← Back to register</a>
     <h1>Hades voice labs</h1>
-    <p class="lede">First real adopter sample: glossary for her voice-conversion lab, then the files that own the measurements.</p>
+    <p class="lede">Adopter sample: voice-conversion glossary, then the files that own the measurements.</p>
     <p class="feature-sections" data-testid="feature-sections">Sections: Glossary · Associated files</p>
+    <p class="feature-file-strip" id="file-path-strip" data-testid="feature-file-strip"><span class="strip-label">Paths:</span> <code>hades-voice-lab/README.md</code> · <code>hades-voice-lab/pipeline.py</code> · <code>hades-voice-lab/sweep_pitch.py</code> · <code>hades-voice-lab/measure_reference_vs_pipeline.py</code> · +4 more</p>
   </header>
   <main>
     <section aria-labelledby="glossary-heading">
       <h2 id="glossary-heading">Glossary</h2>
       <dl class="glossary" id="glossary-root" data-testid="glossary-root" data-loaded="static">
   <dt>Voice labs</dt>
-  <dd>The RVC experiment environment that asks whether a Japanese TTS line can be shifted into the register the owner wants, and how far that conversion can go.</dd>
+  <dd>RVC experiment env: can a Japanese TTS line shift into the owner's target register, and how far?</dd>
   <dt>Register gap</dt>
-  <dd>Measured median pitch difference between real Japanese voice-over references (~329 Hz p50) and the current pipeline (~222 Hz p50): about +107 Hz, or ~6.8 semitones.</dd>
+  <dd>Median pitch gap: refs ~329 Hz p50 vs pipeline ~222 Hz p50 (~+107 Hz / ~6.8 semitones).</dd>
   <dt>Pitch floor (150 Hz)</dt>
-  <dd>Female-appropriate pyin band (150–600 Hz). A prior 70 Hz male floor let pyin jump an octave and falsely inflated expressiveness; re-measure with 150 Hz.</dd>
+  <dd>Female pyin band 150–600 Hz. A 70 Hz floor let pyin jump an octave; re-measure at 150 Hz.</dd>
   <dt>RVC pipeline</dt>
-  <dd>TTS then retrieval-based voice conversion on the PC (CUDA, ~5 s/clip). RVC preserves the pitch contour it is given, so a pitch shift moves register but does not add movement.</dd>
+  <dd>TTS then retrieval VC on PC (CUDA, ~5 s/clip). RVC keeps pitch contour; shift moves register only.</dd>
   <dt>Listening page</dt>
-  <dd>Self-contained HTML built by build_voice_register_page.py that embeds reference and pipeline clips as data URIs so register can be judged by ear offline.</dd>
+  <dd>HTML from build_voice_register_page.py with data-URI clips for offline ear checks.</dd>
   <dt>Preservation branch</dt>
-  <dd>rescue/voice-lab-153 holds unique lab scripts and small outputs; venv/ and models/ stay regenerable and untracked. Not a merge candidate into product src.</dd>
+  <dd>rescue/voice-lab-153 holds unique scripts/outputs; venv/models regenerable. Not a product merge.</dd>
   <dt>Hosting constraint</dt>
-  <dd>Production cannot reach the PC on a listening port (DERP-only). A PC-hosted RVC service needs a Tailscale ACL change or reverse tunnel.</dd>
+  <dd>Prod cannot reach the PC listen port (DERP-only). Needs Tailscale ACL or reverse tunnel.</dd>
       </dl>
     </section>
     <section aria-labelledby="files-heading">
