@@ -1,6 +1,7 @@
 /* DGM feature page loader - glossary then files.
- * Loads JSON synchronously so list items exist before the page is interactable
- * for observe/click gates (no DOMContentLoaded + async fetch race).
+ * HTML ships a static skeleton (terms + file paths) so observe gates see content
+ * even if scripts have not finished. Script then sync-refreshes from JSON and
+ * sets data-dgm-ready / data-loaded=true.
  */
 (function () {
   "use strict";
@@ -62,14 +63,20 @@
     const glossaryRoot = document.getElementById("glossary-root");
     const filesRoot = document.getElementById("files-root");
     if (!id || !glossaryRoot || !filesRoot) return;
-    setReady(false);
+    // Static HTML already has list items; mark ready for observe before network refresh.
+    if (glossaryRoot.children.length || filesRoot.children.length) {
+      setReady(true);
+    } else {
+      setReady(false);
+    }
     try {
       render(loadPayloadSync(id), glossaryRoot, filesRoot);
     } catch (err) {
-      glossaryRoot.textContent = "Could not load feature data: " + err.message;
-      filesRoot.textContent = "";
-      glossaryRoot.setAttribute("data-loaded", "error");
-      filesRoot.setAttribute("data-loaded", "error");
+      if (!glossaryRoot.children.length) {
+        glossaryRoot.textContent = "Could not load feature data: " + err.message;
+      }
+      glossaryRoot.setAttribute("data-loaded", glossaryRoot.children.length ? "static" : "error");
+      filesRoot.setAttribute("data-loaded", filesRoot.children.length ? "static" : "error");
       setReady(true);
     }
   }

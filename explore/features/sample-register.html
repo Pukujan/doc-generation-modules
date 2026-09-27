@@ -16,11 +16,26 @@
   <main>
     <section aria-labelledby="glossary-heading">
       <h2 id="glossary-heading">Glossary</h2>
-      <dl class="glossary" id="glossary-root" data-testid="glossary-root" data-loaded="false"></dl>
+      <dl class="glossary" id="glossary-root" data-testid="glossary-root" data-loaded="static">
+  <dt>Register</dt>
+  <dd>The global index of features with citation links into per-feature pages.</dd>
+  <dt>Feature page</dt>
+  <dd>One HTML page that shows a human-language glossary, then the associated file list.</dd>
+  <dt>Citation</dt>
+  <dd>A clickable link from the register into evidence or the feature page itself.</dd>
+  <dt>Click gate</dt>
+  <dd>A jev-ultrafast run that must exercise explore navigation before claiming the UI works.</dd>
+      </dl>
     </section>
     <section aria-labelledby="files-heading">
       <h2 id="files-heading">Associated files</h2>
-      <ul class="file-list" id="files-root" data-testid="files-root" data-loaded="false"></ul>
+      <ul class="file-list" id="files-root" data-testid="files-root" data-loaded="static">
+  <li><span>explore/index.html</span><span class="role">register shell</span></li>
+  <li><span>explore/data/register.json</span><span class="role">register data</span></li>
+  <li><span>explore/features/sample-register.html</span><span class="role">this feature page</span></li>
+  <li><span>explore/app.js</span><span class="role">vanilla JS register loader</span></li>
+  <li><span>tests/explore_click_gate.md</span><span class="role">ultrafast gating plan</span></li>
+      </ul>
     </section>
   </main>
   <script>window.DGM_FEATURE_DATA = "sample-register";</script>

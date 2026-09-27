@@ -16,11 +16,22 @@
   <main>
     <section aria-labelledby="glossary-heading">
       <h2 id="glossary-heading">Glossary</h2>
-      <dl class="glossary" id="glossary-root" data-testid="glossary-root" data-loaded="false"></dl>
+      <dl class="glossary" id="glossary-root" data-testid="glossary-root" data-loaded="static">
+  <dt>writing-direction</dt>
+  <dd>MUST-load module for README and product entry pages (scan-first selective bold).</dd>
+  <dt>human-sounding-writing (hsw)</dt>
+  <dd>MUST-load module for PR/issue/commit/docs and general agent prose.</dd>
+  <dt>human-output-naming (hon)</dt>
+  <dd>MUST-load for generated artifact filenames, asset-manifest paths, and committed media basenames (helper 0.5.5+; EXPECTED_MODULES=8).</dd>
+      </dl>
     </section>
     <section aria-labelledby="files-heading">
       <h2 id="files-heading">Associated files</h2>
-      <ul class="file-list" id="files-root" data-testid="files-root" data-loaded="false"></ul>
+      <ul class="file-list" id="files-root" data-testid="files-root" data-loaded="static">
+  <li><span>AGENTS.md</span><span class="role">agent contract + writing router</span></li>
+  <li><span>.content-system/system-version.json</span><span class="role">helper pin 0.5.5 + 8 modules</span></li>
+  <li><span>docs/HELPER_PINS.md</span><span class="role">EXPECTED_MODULES=8 and pin SHA notes</span></li>
+      </ul>
     </section>
   </main>
   <script>window.DGM_FEATURE_DATA = "writing-surfaces";</script>
