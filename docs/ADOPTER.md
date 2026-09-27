@@ -1,4 +1,4 @@
-﻿# Adopter pin guide
+# Adopter pin guide
 
 How a product repo (first: **hades-v2**) consumes Doc Generation Modules without vendoring writing rules into DGM.
 

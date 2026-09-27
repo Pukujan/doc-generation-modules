@@ -1,4 +1,4 @@
-﻿# Doc Generation Modules
+# Doc Generation Modules
 
 > **A pin-as-submodule doc register and explore hub** - citations up front, one click into a feature glossary and its files.
 

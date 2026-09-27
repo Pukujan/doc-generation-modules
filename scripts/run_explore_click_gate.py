@@ -1,4 +1,4 @@
-﻿#!/usr/bin/env python3
+#!/usr/bin/env python3
 """Documented runner for DGM explore click gating via jev-ultrafast.
 
 Does not claim FE success by itself. Prefer a real Ultrafast Agent run when the

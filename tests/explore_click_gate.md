@@ -1,4 +1,4 @@
-﻿# Explore UI click gate (jev-ultrafast)
+# Explore UI click gate (jev-ultrafast)
 
 DGM does **not** claim the explore frontend works until this gate has been run (or CI records an equivalent Ultrafast pass).
 

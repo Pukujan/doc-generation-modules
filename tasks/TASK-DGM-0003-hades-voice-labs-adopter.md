@@ -1,4 +1,4 @@
-﻿# TASK-DGM-0003 — Hades Voice Labs Adopter Sample
+# TASK-DGM-0003 — Hades Voice Labs Adopter Sample
 
 <!-- continuity:task {"acceptance":["explore register lists hades-voice-labs with citations","feature page glossary+files for voice labs","docs/ADOPTER.md ships pin+overlay instructions","click-gate goal targets hades-voice-labs","PR links #5 with squash auto-merge preferred"],"depends_on":["DGM-0001","DGM-0002"],"goal":"Host a real hades voice-labs doc set in explore and ship adopter pin templates for hades-v2.","id":"DGM-0003","issue_url":"https://github.com/Pukujan/doc-generation-modules/issues/5","next_action":"land PR and arm squash auto-merge; run Ultrafast click gate","owner":"Grok Bot","priority":"high","protocol_version":"0.1.0-draft","schema":"project-continuity.task.v1","status":"active","why":"Owner named hades-v2 as first real DGM adopter for her voice labs docs."} -->
 
