@@ -1,4 +1,4 @@
-﻿# Helper pins (content + continuity)
+# Helper pins (content + continuity)
 
 This note is for agents and maintainers. The product README stays product-only.
 
@@ -7,10 +7,9 @@ This note is for agents and maintainers. The product README stays product-only.
 | Field | Value |
 | --- | --- |
 | Repository | https://github.com/Pukujan/content-generation-modules |
-| Pin version | **0.5.4** |
-| Pin SHA | `c95d73a0ce072a6d7173ce4848621a25cdf1cc7e` (tip of `main` while PR #27 open) |
-| EXPECTED_MODULES | **7** — brand-foundation, content-context, writing-direction, human-sounding-writing, visual-direction, image-generation, html-demo |
-| Local note | Sibling checkout may already be **0.5.5** with **human-output-naming** (8 modules). Do not pin 0.5.5 until [PR #27](https://github.com/Pukujan/content-generation-modules/pull/27) merges. Then set EXPECTED_MODULES=8 and route filenames through **hon**. |
+| Pin version | **0.5.5** |
+| Pin SHA | `085aeb174619191f5c2a51a1f0715dd71113e386` |
+| EXPECTED_MODULES | **8** — brand-foundation, content-context, writing-direction, human-sounding-writing, **human-output-naming**, visual-direction, image-generation, html-demo |
 | Cross-links | [issue #26](https://github.com/Pukujan/content-generation-modules/issues/26), [PR #27](https://github.com/Pukujan/content-generation-modules/pull/27) — do not edit that helper from DGM |
 
 Validate:
@@ -30,7 +29,7 @@ Done when output includes `VALID`.
 | --- | --- |
 | README / product entry | writing-direction |
 | PR / issue / commit / non-README docs | human-sounding-writing (hsw) |
-| Generated artifact filenames (0.5.5+) | human-output-naming (hon) |
+| Generated artifact filenames / asset-manifest paths / committed media basenames | human-output-naming (hon) |
 
 ## Continuity helper (FULL PCM)
 

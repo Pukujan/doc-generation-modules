@@ -2,14 +2,15 @@
   "schema_version": "content-generation.adapter.v1",
   "system": "content-generation-modules",
   "helper_repository": "https://github.com/Pukujan/content-generation-modules",
-  "helper_version": "0.5.4",
-  "helper_commit": "c95d73a0ce072a6d7173ce4848621a25cdf1cc7e",
-  "helper_pin_note": "FULL helper 0.5.4 at tip of main while PR #27 (0.5.5 human-output-naming) is open. EXPECTED_MODULES=7 (no human-output-naming). Local CGM checkout may already show 0.5.5 with 8 modules including human-output-naming — do not pin that until #27 merges. After merge: bump helper_version to 0.5.5, helper_commit to merged SHA, add human-output-naming to modules, EXPECTED_MODULES=8, and route generated filenames through hon.",
+  "helper_version": "0.5.5",
+  "helper_commit": "085aeb174619191f5c2a51a1f0715dd71113e386",
+  "helper_pin_note": "FULL helper 0.5.5 at main tip after PR #27. EXPECTED_MODULES=8 including human-output-naming (hon). Writing router: README→writing-direction; PR/issue/commit/docs→hsw MUST-load; generated artifact filenames / asset-manifest / media basenames→hon MUST-load. Cross-link CGM #26/#27; do not edit that helper from DGM.",
   "modules": [
     "brand-foundation",
     "content-context",
     "writing-direction",
     "human-sounding-writing",
+    "human-output-naming",
     "visual-direction",
     "image-generation",
     "html-demo"
@@ -22,5 +23,5 @@
     "explore/index.html"
   ],
   "review_outputs": [],
-  "adoption_status": "adapter pinned at 0.5.4 (EXPECTED_MODULES=7); writing router README→writing-direction, PR/issue/commit/docs→hsw; filenames→hon when helper reaches 0.5.5. Root README product-only. Refs #1."
+  "adoption_status": "adapter pinned at 0.5.5 (EXPECTED_MODULES=8 + hon); writing router README→writing-direction, PR/issue/commit/docs→hsw, filenames→hon. Root README product-only. Refs #3."
 }

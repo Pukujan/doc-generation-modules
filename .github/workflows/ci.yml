@@ -1,4 +1,4 @@
-﻿name: ci
+name: ci
 
 # Required status check name: gates
 on:
@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       PCM_PIN: 412d190e6244ef59279ad5d60f4c7622bfb43e5f
-      CGM_PIN: c95d73a0ce072a6d7173ce4848621a25cdf1cc7e
+      CGM_PIN: 085aeb174619191f5c2a51a1f0715dd71113e386
     steps:
       - uses: actions/checkout@v4
 

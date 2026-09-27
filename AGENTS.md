@@ -1,4 +1,4 @@
-﻿# Doc Generation Modules — agent contract
+# Doc Generation Modules — agent contract
 
 Read `README.md`, `PROJECT.md`, `HANDOFF.md`, and `checkpoints/CURRENT.md` before editing. Work only inside the active bounded task linked from CURRENT.
 
@@ -18,10 +18,9 @@ MUST load the named module before drafting each surface (soft router — APPLY, 
 | --- | --- |
 | `README.md` / product entry | `writing-direction` |
 | PR/issue titles & bodies, commit subjects/messages, non-README docs | `human-sounding-writing` (hsw) |
-| Generated artifact / asset-manifest / media basenames | `human-output-naming` (hon) **when** helper pin is 0.5.5+ |
+| Generated artifact / asset-manifest / media basenames | `human-output-naming` (hon) |
 
-Pinned today: helper **0.5.4** @ `c95d73a0ce072a6d7173ce4848621a25cdf1cc7e`, **EXPECTED_MODULES=7** (no hon yet). When [content-generation-modules#27](https://github.com/Pukujan/content-generation-modules/pull/27) merges, bump pin and EXPECTED_MODULES to 8. Cross-link [#26](https://github.com/Pukujan/content-generation-modules/issues/26); do not edit that helper from DGM.
-
+Pinned today: helper **0.5.5** @ `085aeb174619191f5c2a51a1f0715dd71113e386`, **EXPECTED_MODULES=8** including **human-output-naming**. Cross-link [content-generation-modules#26](https://github.com/Pukujan/content-generation-modules/issues/26) / [#27](https://github.com/Pukujan/content-generation-modules/pull/27); do not edit that helper from DGM.
 ## Validate before calling adapter work done
 
 ```bash
