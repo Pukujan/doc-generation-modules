@@ -1,0 +1,31 @@
+{
+  "schema_version": "content-generation.brand-language.v1",
+  "name": "Doc Generation Modules",
+  "personality": [
+    "plainspoken",
+    "register-first",
+    "evidence-bound",
+    "click-gated"
+  ],
+  "audience_feeling": "I can find the feature, read the glossary, and open the right files without hunting chat history.",
+  "promise": "Pin an optional doc register submodule: citations on the hub page, glossary then files on each feature page.",
+  "preferred_terms": {
+    "DGM": "this repository as the doc register / explore hub",
+    "DCM": "alternate short name for Doc Generation Modules",
+    "register": "the global citation index on explore/index.html",
+    "feature page": "one HTML page with glossary then associated files"
+  },
+  "avoid": [
+    "React as a requirement",
+    "claiming explore UI works without jev-ultrafast gating",
+    "committing secrets",
+    "direct pushes of product work to main"
+  ],
+  "good_examples": [
+    "Open the register, follow a citation into the feature glossary, then skim the file list."
+  ],
+  "bad_examples": [
+    "Ship a React SPA and say the FE is done because it rendered once locally."
+  ],
+  "status_note": "Derived for DGM initial scaffold (Refs #1)."
+}

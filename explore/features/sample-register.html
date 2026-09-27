@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sample register feature — DGM</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <header class="feature-header">
+    <a class="back-link" href="../index.html" data-testid="back-to-register">← Back to register</a>
+    <h1>Sample register feature</h1>
+    <p class="lede">Glossary first, then associated files.</p>
+  </header>
+  <main>
+    <section aria-labelledby="glossary-heading">
+      <h2 id="glossary-heading">Glossary</h2>
+      <dl class="glossary" id="glossary-root" data-testid="glossary-root"></dl>
+    </section>
+    <section aria-labelledby="files-heading">
+      <h2 id="files-heading">Associated files</h2>
+      <ul class="file-list" id="files-root" data-testid="files-root"></ul>
+    </section>
+  </main>
+  <script src="../feature.js" defer></script>
+  <script>window.DGM_FEATURE_DATA = "sample-register";</script>
+</body>
+</html>

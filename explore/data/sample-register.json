@@ -1,0 +1,29 @@
+{
+  "id": "sample-register",
+  "title": "Sample register feature",
+  "glossary": [
+    {
+      "term": "Register",
+      "definition": "The global index of features with citation links into per-feature pages."
+    },
+    {
+      "term": "Feature page",
+      "definition": "One HTML page that shows a human-language glossary, then the associated file list."
+    },
+    {
+      "term": "Citation",
+      "definition": "A clickable link from the register into evidence or the feature page itself."
+    },
+    {
+      "term": "Click gate",
+      "definition": "A jev-ultrafast run that must exercise explore navigation before claiming the UI works."
+    }
+  ],
+  "files": [
+    { "path": "explore/index.html", "role": "register shell" },
+    { "path": "explore/data/register.json", "role": "register data" },
+    { "path": "explore/features/sample-register.html", "role": "this feature page" },
+    { "path": "explore/app.js", "role": "vanilla JS register loader" },
+    { "path": "tests/explore_click_gate.md", "role": "ultrafast gating plan" }
+  ]
+}
