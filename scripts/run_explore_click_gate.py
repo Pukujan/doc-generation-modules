@@ -14,7 +14,7 @@ import sys
 from pathlib import Path
 
 GOAL = (
-    "Open the doc register. Click the control that opens the sample-register "
+    "Open the doc register. Click the control that opens the hades-voice-labs "
     "feature page. Confirm a glossary and an associated files list are visible. "
     "Click back to the register. Stop when those steps succeeded."
 )
@@ -48,7 +48,7 @@ def main() -> int:
     root = args.ultrafast_root
     if args.dry_print or not root or not root.is_dir():
         print(
-            "STATUS: plan-only — Ultrafast checkout not used. "
+            "STATUS: plan-only - Ultrafast checkout not used. "
             "Clone https://github.com/Pukujan/jev-ultrafast and re-run with "
             "--ultrafast-root, or export JEV_ULTRAFAST_ROOT. "
             "Do not claim FE click success yet."
@@ -59,7 +59,7 @@ def main() -> int:
     sys.path.insert(0, str(root))
     try:
         from jev_ultrafast import Agent  # type: ignore
-    except Exception as exc:  # noqa: BLE001 — report import failure honestly
+    except Exception as exc:  # noqa: BLE001 - report import failure honestly
         print(f"STATUS: Ultrafast import failed ({exc}). Gate not executed.")
         return 2
 

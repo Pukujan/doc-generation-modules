@@ -19,7 +19,7 @@ python scripts/run_explore_click_gate.py --ultrafast-root D:\claude\jev-ultrafas
 Expected human-visible outcome for the Ultrafast goal:
 
 1. Open the register page.
-2. Click **Open feature page** for `sample-register`.
+2. Click **Open feature page** for `hades-voice-labs` (first real adopter sample; `sample-register` remains a fallback demo).
 3. Confirm glossary and associated files sections are visible.
 4. Click **Back to register**.
 

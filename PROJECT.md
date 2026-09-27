@@ -19,5 +19,6 @@ GitHub Issues own task scope and lifecycle. Merged `main` owns accepted code. PR
 
 ## Active program
 
-See `checkpoints/CURRENT.md` and GitHub issue #1 for the initial scaffold.
+See `checkpoints/CURRENT.md`. Active leaf: issue #5 (DGM-0003 hades voice-labs adopter sample). Downstream: hades-v2 #158.
+
 
