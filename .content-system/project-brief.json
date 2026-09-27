@@ -16,17 +16,20 @@
   "evidence": [
     {
       "claim": "Scaffold explore register and sample feature page exist with glossary and file-list sections.",
-      "source": "explore/index.html and explore/features/sample-register.html on the scaffold branch",
+      "source": "explore/index.html and explore/features/sample-register.html",
       "status": "shipped",
-      "supports": "Working tree on feat/initial-scaffold defines register, glossary, and file list regions in HTML/JSON.",
-      "limits": "Sample data only; permalink will be refreshed to the merged commit after PR lands. Does not prove adopter catalogs or ultrafast gate green.",
+      "supports": "Committed explore shell and sample feature HTML define register, glossary, and file list regions.",
+      "limits": "Sample data only; does not prove adopter catalogs or ultrafast gate green.",
       "recorded_at": "2026-09-27T15:30:00-04:00",
       "cite_in_readme": false,
       "source_revision": {
-        "kind": "owner_decision",
-        "reference": "Alex scaffold requirements; GitHub issue #1 acceptance for explore shell",
-        "observed_at": "2026-09-27",
-        "uri": "https://github.com/Pukujan/doc-generation-modules/issues/1"
+        "kind": "repository_artifact",
+        "reference": "explore/index.html @ 96801db",
+        "repository": "Pukujan/doc-generation-modules",
+        "commit": "96801dbe166b933576a5672a9d3687bc49ffa7d7",
+        "path": "explore/index.html",
+        "locator": "register-heading",
+        "uri": "https://github.com/Pukujan/doc-generation-modules/blob/96801dbe166b933576a5672a9d3687bc49ffa7d7/explore/index.html"
       }
     },
     {
