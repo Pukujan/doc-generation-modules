@@ -42,3 +42,7 @@ A full Ultrafast browser job can be added later when secrets/`OPENROUTER_API_KEY
 | "explore works" | Gate green + independent visual check |
 
 Never upgrade status on render-alone evidence.
+
+## Feature-page readiness
+
+Feature pages set `html[data-dgm-ready=true]` and `#glossary-root` / `#files-root` `data-loaded=true` only after glossary and associated-file list items are in the DOM. JSON is loaded synchronously from a non-`defer` script so observe gates do not race an empty `#files-root`. Header text also names **Associated files** early (`[data-testid=feature-sections]`) so short text snips still see the section label. When scoring Ultrafast artifacts, prefer full page text or `data-loaded` / file paths over a 240-character snip alone.

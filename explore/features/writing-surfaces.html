@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-dgm-ready="false">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -11,18 +11,19 @@
     <a class="back-link" href="../index.html" data-testid="back-to-register">← Back to register</a>
     <h1>Writing surfaces (router)</h1>
     <p class="lede">Which module to MUST-load before writing each surface.</p>
+    <p class="feature-sections" data-testid="feature-sections">Sections: Glossary · Associated files</p>
   </header>
   <main>
     <section aria-labelledby="glossary-heading">
       <h2 id="glossary-heading">Glossary</h2>
-      <dl class="glossary" id="glossary-root" data-testid="glossary-root"></dl>
+      <dl class="glossary" id="glossary-root" data-testid="glossary-root" data-loaded="false"></dl>
     </section>
     <section aria-labelledby="files-heading">
       <h2 id="files-heading">Associated files</h2>
-      <ul class="file-list" id="files-root" data-testid="files-root"></ul>
+      <ul class="file-list" id="files-root" data-testid="files-root" data-loaded="false"></ul>
     </section>
   </main>
-  <script src="../feature.js" defer></script>
   <script>window.DGM_FEATURE_DATA = "writing-surfaces";</script>
+  <script src="../feature.js"></script>
 </body>
 </html>
