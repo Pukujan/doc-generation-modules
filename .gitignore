@@ -1,0 +1,10 @@
+﻿.env
+.env.*
+!.env.example
+*.local.json
+.DS_Store
+__pycache__/
+.pytest_cache/
+.venv/
+node_modules/
+.continuity/recovery/
