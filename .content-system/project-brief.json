@@ -1,0 +1,58 @@
+{
+  "schema_version": "content-generation.project-brief.v2",
+  "project": "Doc Generation Modules",
+  "audience": [
+    "humans and agents adopting an optional doc register submodule",
+    "maintainers who want glossary-backed feature pages without a heavy frontend"
+  ],
+  "problem": "Module documentation scatters across folders and chat; people cannot quickly answer what a term means or which files belong to a feature.",
+  "solution": "DGM ships a pin-as-submodule HTML + vanilla JS hub: a global citation register and per-feature pages that show a human glossary then associated files, with explore clicks gated through jev-ultrafast.",
+  "mechanism": [
+    "explore/index.html loads register.json and lists citation links into feature pages",
+    "each feature page renders glossary terms then an associated file list",
+    "scripts/run_explore_click_gate.py documents and invokes the jev-ultrafast click path",
+    "continuity + helper adapter files keep agent installs full-stack without vendoring helper trees"
+  ],
+  "evidence": [
+    {
+      "claim": "Scaffold explore register and sample feature page exist with glossary and file-list sections.",
+      "source": "explore/index.html and explore/features/sample-register.html",
+      "status": "shipped",
+      "supports": "Committed explore shell and sample feature HTML define register, glossary, and file list regions.",
+      "limits": "Sample data only; does not prove adopter catalogs or ultrafast gate green.",
+      "recorded_at": "2026-09-27T15:30:00-04:00",
+      "cite_in_readme": false,
+      "source_revision": {
+        "kind": "repository_artifact",
+        "reference": "explore/index.html @ 96801db",
+        "repository": "Pukujan/doc-generation-modules",
+        "commit": "96801dbe166b933576a5672a9d3687bc49ffa7d7",
+        "path": "explore/index.html",
+        "locator": "register-heading",
+        "uri": "https://github.com/Pukujan/doc-generation-modules/blob/96801dbe166b933576a5672a9d3687bc49ffa7d7/explore/index.html"
+      }
+    },
+    {
+      "claim": "A documented jev-ultrafast click-gating path is checked in for explore UI navigation.",
+      "source": "tests/explore_click_gate.md",
+      "status": "planned",
+      "supports": "Gate doc and runner script name Ultrafast as the click authority and refuse to claim FE success without running it.",
+      "limits": "Planned until a recorded Ultrafast run is attached; CI syntax-checks JS only.",
+      "recorded_at": "2026-09-27T15:30:00-04:00",
+      "cite_in_readme": false,
+      "source_revision": {
+        "kind": "owner_decision",
+        "reference": "Alex scaffold requirements via agent + widget yes; issue #1",
+        "observed_at": "2026-09-27",
+        "uri": "https://github.com/Pukujan/doc-generation-modules/issues/1"
+      }
+    }
+  ],
+  "boundaries": [
+    "DGM does not vendor content or continuity helper source trees",
+    "No React requirement",
+    "Narrative marketing imagery for root README is deferred",
+    "Explore FE success claims require the ultrafast gate",
+    "Filename speakable-label helper work stays upstream (cross-link content-generation-modules issues #26/#27); do not reimplement here"
+  ]
+}

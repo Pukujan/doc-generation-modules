@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DGM Doc Register</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <p class="eyebrow">Doc Generation Modules</p>
+    <h1>Global register</h1>
+    <p class="lede">Citations and links into per-feature glossary pages. Vanilla HTML/JS — no React.</p>
+    <p class="gate-note" data-testid="gate-note">Explore clicks are <strong>gated</strong> via jev-ultrafast. See <code>tests/explore_click_gate.md</code> before claiming the UI works.</p>
+  </header>
+  <main>
+    <section aria-labelledby="register-heading">
+      <h2 id="register-heading">Features</h2>
+      <div id="register-root" data-testid="register-root" aria-live="polite">Loading register…</div>
+    </section>
+  </main>
+  <footer>
+    <a href="https://github.com/Pukujan/doc-generation-modules" data-testid="repo-link">Repository</a>
+  </footer>
+  <script src="app.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+{
+  "schema_version": "content-generation.review-rubric.v1",
+  "dimensions": [
+    {
+      "id": "register_clarity",
+      "question": "Can a newcomer find a feature citation and open its page in under thirty seconds?"
+    },
+    {
+      "id": "glossary_then_files",
+      "question": "Does each feature page show human glossary terms before the file list?"
+    },
+    {
+      "id": "click_gate",
+      "question": "Is explore navigation gated or documented through jev-ultrafast before FE success claims?"
+    },
+    {
+      "id": "product_only_readme",
+      "question": "Does the root README stay about DGM the product, without helper promotion?"
+    },
+    {
+      "id": "full_stack_pins",
+      "question": "Are full continuity + full content-helper adapters present and validateable?"
+    }
+  ],
+  "status_note": "DGM scaffold review rubric (Refs #1)."
+}

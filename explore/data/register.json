@@ -1,0 +1,34 @@
+{
+  "title": "DGM global register",
+  "updated": "2026-09-27",
+  "features": [
+    {
+      "id": "sample-register",
+      "title": "Sample register feature",
+      "summary": "Demonstrates glossary-then-files layout for the explore hub.",
+      "href": "features/sample-register.html",
+      "citations": [
+        {
+          "label": "Issue #1 scaffold acceptance",
+          "href": "https://github.com/Pukujan/doc-generation-modules/issues/1"
+        },
+        {
+          "label": "Explore click gate plan",
+          "href": "../tests/explore_click_gate.md"
+        }
+      ]
+    },
+    {
+      "id": "writing-surfaces",
+      "title": "Writing surfaces (router)",
+      "summary": "Maps README, GitHub prose, and filenames to the correct writing modules.",
+      "href": "features/writing-surfaces.html",
+      "citations": [
+        {
+          "label": "AGENTS writing router",
+          "href": "../AGENTS.md#writing-router"
+        }
+      ]
+    }
+  ]
+}

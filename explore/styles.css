@@ -1,0 +1,53 @@
+﻿:root {
+  --bg: #f6f7f9;
+  --ink: #1a1f2b;
+  --muted: #5b6577;
+  --card: #ffffff;
+  --accent: #2f6fed;
+  --border: #d8dee8;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: "Segoe UI", system-ui, sans-serif;
+  color: var(--ink);
+  background: var(--bg);
+  line-height: 1.5;
+}
+.site-header, main, footer, .feature-header {
+  max-width: 52rem;
+  margin: 0 auto;
+  padding: 1.25rem 1rem;
+}
+.eyebrow { text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); font-size: 0.75rem; }
+.lede { color: var(--muted); }
+.gate-note {
+  background: #fff7e6;
+  border: 1px solid #f0d9a8;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+}
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1rem 1.1rem;
+  margin: 0.75rem 0;
+}
+.card h3 { margin: 0 0 0.35rem; }
+.card a { color: var(--accent); }
+.citations { margin: 0.5rem 0 0; padding-left: 1.1rem; }
+.glossary dt { font-weight: 600; margin-top: 0.75rem; }
+.glossary dd { margin: 0.15rem 0 0; color: var(--muted); }
+.file-list { list-style: none; padding: 0; }
+.file-list li {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--border);
+  padding: 0.45rem 0;
+  font-family: ui-monospace, Consolas, monospace;
+  font-size: 0.9rem;
+}
+.file-list .role { color: var(--muted); font-family: "Segoe UI", system-ui, sans-serif; }
+.back-link { display: inline-block; margin-bottom: 0.75rem; }
