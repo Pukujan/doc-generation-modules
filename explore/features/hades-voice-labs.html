@@ -16,11 +16,35 @@
   <main>
     <section aria-labelledby="glossary-heading">
       <h2 id="glossary-heading">Glossary</h2>
-      <dl class="glossary" id="glossary-root" data-testid="glossary-root" data-loaded="false"></dl>
+      <dl class="glossary" id="glossary-root" data-testid="glossary-root" data-loaded="static">
+  <dt>Voice labs</dt>
+  <dd>The RVC experiment environment that asks whether a Japanese TTS line can be shifted into the register the owner wants, and how far that conversion can go.</dd>
+  <dt>Register gap</dt>
+  <dd>Measured median pitch difference between real Japanese voice-over references (~329 Hz p50) and the current pipeline (~222 Hz p50): about +107 Hz, or ~6.8 semitones.</dd>
+  <dt>Pitch floor (150 Hz)</dt>
+  <dd>Female-appropriate pyin band (150–600 Hz). A prior 70 Hz male floor let pyin jump an octave and falsely inflated expressiveness; re-measure with 150 Hz.</dd>
+  <dt>RVC pipeline</dt>
+  <dd>TTS then retrieval-based voice conversion on the PC (CUDA, ~5 s/clip). RVC preserves the pitch contour it is given, so a pitch shift moves register but does not add movement.</dd>
+  <dt>Listening page</dt>
+  <dd>Self-contained HTML built by build_voice_register_page.py that embeds reference and pipeline clips as data URIs so register can be judged by ear offline.</dd>
+  <dt>Preservation branch</dt>
+  <dd>rescue/voice-lab-153 holds unique lab scripts and small outputs; venv/ and models/ stay regenerable and untracked. Not a merge candidate into product src.</dd>
+  <dt>Hosting constraint</dt>
+  <dd>Production cannot reach the PC on a listening port (DERP-only). A PC-hosted RVC service needs a Tailscale ACL change or reverse tunnel.</dd>
+      </dl>
     </section>
     <section aria-labelledby="files-heading">
       <h2 id="files-heading">Associated files</h2>
-      <ul class="file-list" id="files-root" data-testid="files-root" data-loaded="false"></ul>
+      <ul class="file-list" id="files-root" data-testid="files-root" data-loaded="static">
+  <li><span>hades-voice-lab/README.md</span><span class="role">lab product story + measured findings</span></li>
+  <li><span>hades-voice-lab/pipeline.py</span><span class="role">TTS → RVC for one line</span></li>
+  <li><span>hades-voice-lab/sweep_pitch.py</span><span class="role">pitch sweep across models/shifts</span></li>
+  <li><span>hades-voice-lab/measure_reference_vs_pipeline.py</span><span class="role">reference vs pipeline comparison</span></li>
+  <li><span>hades-voice-lab/build_voice_register_page.py</span><span class="role">deterministic listening page builder</span></li>
+  <li><span>hades-voice-lab/generate_register_test.py</span><span class="role">register test clip generator</span></li>
+  <li><span>hades-v2/AGENTS.md</span><span class="role">registers lab folder so cleanup skips it</span></li>
+  <li><span>explore/features/hades-voice-labs.html</span><span class="role">this DGM feature page</span></li>
+      </ul>
     </section>
   </main>
   <script>window.DGM_FEATURE_DATA = "hades-voice-labs";</script>
