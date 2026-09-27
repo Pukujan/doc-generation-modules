@@ -1,4 +1,4 @@
-﻿# Doc Generation Modules — Project Contract
+# Doc Generation Modules — Project Contract
 
 <!-- continuity:project {"id":"doc-generation-modules","protocol_version":"0.1.0-draft","schema":"project-continuity.project.v1","title":"Doc Generation Modules"} -->
 

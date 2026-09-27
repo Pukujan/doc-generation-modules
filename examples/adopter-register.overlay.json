@@ -1,4 +1,4 @@
-﻿{
+{
   "title": "Adopter overlay example (not loaded by default)",
   "comment": "Copy fields into explore/data/register.json or serve a product-owned register that reuses DGM app.js.",
   "features": [

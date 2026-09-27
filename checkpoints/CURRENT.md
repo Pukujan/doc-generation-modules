@@ -1,4 +1,4 @@
-﻿# Current Repository Checkpoint
+# Current Repository Checkpoint
 
 <!-- continuity:current {"active_task":"DGM-0003","active_task_file":"tasks/TASK-DGM-0003-hades-voice-labs-adopter.md","protocol_version":"0.1.0-draft","schema":"project-continuity.current.v1"} -->
 
