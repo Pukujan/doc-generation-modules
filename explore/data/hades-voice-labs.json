@@ -1,0 +1,44 @@
+﻿{
+  "id": "hades-voice-labs",
+  "title": "Hades voice labs",
+  "glossary": [
+    {
+      "term": "Voice labs",
+      "definition": "The RVC experiment environment that asks whether a Japanese TTS line can be shifted into the register the owner wants, and how far that conversion can go."
+    },
+    {
+      "term": "Register gap",
+      "definition": "Measured median pitch difference between real Japanese voice-over references (~329 Hz p50) and the current pipeline (~222 Hz p50): about +107 Hz, or ~6.8 semitones."
+    },
+    {
+      "term": "Pitch floor (150 Hz)",
+      "definition": "Female-appropriate pyin band (150–600 Hz). A prior 70 Hz male floor let pyin jump an octave and falsely inflated expressiveness; re-measure with 150 Hz."
+    },
+    {
+      "term": "RVC pipeline",
+      "definition": "TTS then retrieval-based voice conversion on the PC (CUDA, ~5 s/clip). RVC preserves the pitch contour it is given, so a pitch shift moves register but does not add movement."
+    },
+    {
+      "term": "Listening page",
+      "definition": "Self-contained HTML built by build_voice_register_page.py that embeds reference and pipeline clips as data URIs so register can be judged by ear offline."
+    },
+    {
+      "term": "Preservation branch",
+      "definition": "rescue/voice-lab-153 holds unique lab scripts and small outputs; venv/ and models/ stay regenerable and untracked. Not a merge candidate into product src."
+    },
+    {
+      "term": "Hosting constraint",
+      "definition": "Production cannot reach the PC on a listening port (DERP-only). A PC-hosted RVC service needs a Tailscale ACL change or reverse tunnel."
+    }
+  ],
+  "files": [
+    { "path": "hades-voice-lab/README.md", "role": "lab product story + measured findings" },
+    { "path": "hades-voice-lab/pipeline.py", "role": "TTS → RVC for one line" },
+    { "path": "hades-voice-lab/sweep_pitch.py", "role": "pitch sweep across models/shifts" },
+    { "path": "hades-voice-lab/measure_reference_vs_pipeline.py", "role": "reference vs pipeline comparison" },
+    { "path": "hades-voice-lab/build_voice_register_page.py", "role": "deterministic listening page builder" },
+    { "path": "hades-voice-lab/generate_register_test.py", "role": "register test clip generator" },
+    { "path": "hades-v2/AGENTS.md", "role": "registers lab folder so cleanup skips it" },
+    { "path": "explore/features/hades-voice-labs.html", "role": "this DGM feature page" }
+  ]
+}

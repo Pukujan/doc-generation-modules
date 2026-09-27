@@ -1,0 +1,22 @@
+﻿{
+  "title": "Adopter overlay example (not loaded by default)",
+  "comment": "Copy fields into explore/data/register.json or serve a product-owned register that reuses DGM app.js.",
+  "features": [
+    {
+      "id": "hades-voice-labs",
+      "title": "Hades voice labs",
+      "summary": "RVC register gap and lab scripts — replace summary with product-owned wording if you fork the card.",
+      "href": "features/hades-voice-labs.html",
+      "citations": [
+        {
+          "label": "Open voice labs glossary",
+          "href": "features/hades-voice-labs.html"
+        },
+        {
+          "label": "Owning product issue",
+          "href": "https://github.com/Pukujan/hades-v2/issues/158"
+        }
+      ]
+    }
+  ]
+}

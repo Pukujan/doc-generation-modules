@@ -1,7 +1,35 @@
-{
+﻿{
   "title": "DGM global register",
   "updated": "2026-09-27",
   "features": [
+    {
+      "id": "hades-voice-labs",
+      "title": "Hades voice labs",
+      "summary": "First real adopter doc set: RVC register gap, pitch-floor correction, tracked lab scripts, and hosting constraint — with citations into the feature glossary.",
+      "href": "features/hades-voice-labs.html",
+      "citations": [
+        {
+          "label": "Open voice labs glossary",
+          "href": "features/hades-voice-labs.html"
+        },
+        {
+          "label": "hades-v2 #99 — Give Hades a voice",
+          "href": "https://github.com/Pukujan/hades-v2/issues/99"
+        },
+        {
+          "label": "hades-v2 #153 — voice lab rescue / register",
+          "href": "https://github.com/Pukujan/hades-v2/issues/153"
+        },
+        {
+          "label": "hades-v2 #158 — adopt DGM for voice labs",
+          "href": "https://github.com/Pukujan/hades-v2/issues/158"
+        },
+        {
+          "label": "DGM #5 — this adopter sample",
+          "href": "https://github.com/Pukujan/doc-generation-modules/issues/5"
+        }
+      ]
+    },
     {
       "id": "sample-register",
       "title": "Sample register feature",
