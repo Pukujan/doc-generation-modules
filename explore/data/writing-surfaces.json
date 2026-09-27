@@ -12,12 +12,12 @@
     },
     {
       "term": "human-output-naming (hon)",
-      "definition": "MUST-load for generated artifact filenames when the content helper is on 0.5.5+ (EXPECTED_MODULES=8)."
+      "definition": "MUST-load for generated artifact filenames, asset-manifest paths, and committed media basenames (helper 0.5.5+; EXPECTED_MODULES=8)."
     }
   ],
   "files": [
     { "path": "AGENTS.md", "role": "agent contract + writing router" },
-    { "path": ".content-system/system-version.json", "role": "helper pin + module list" },
-    { "path": "docs/HELPER_PINS.md", "role": "EXPECTED_MODULES and pin SHA notes" }
+    { "path": ".content-system/system-version.json", "role": "helper pin 0.5.5 + 8 modules" },
+    { "path": "docs/HELPER_PINS.md", "role": "EXPECTED_MODULES=8 and pin SHA notes" }
   ]
 }

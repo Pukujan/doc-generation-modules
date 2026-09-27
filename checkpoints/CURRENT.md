@@ -1,31 +1,30 @@
-﻿# Current Repository Checkpoint
+# Current Repository Checkpoint
 
-<!-- continuity:current {"active_task":"DGM-0001","active_task_file":"tasks/TASK-DGM-0001-initial-scaffold.md","protocol_version":"0.1.0-draft","schema":"project-continuity.current.v1"} -->
+<!-- continuity:current {"active_task":"DGM-0002","active_task_file":"tasks/TASK-DGM-0002-cgm-0-5-5-pin.md","protocol_version":"0.1.0-draft","schema":"project-continuity.current.v1"} -->
 
 This is an as-of projection; live GitHub issues own progression. Link the owning leaf, parent ancestry and dependencies for active work.
 
 ## Program state
 
-Phase: initial public scaffold on `feat/initial-scaffold` (issue #1).
+Phase: bump content helper pin to 0.5.5 after CGM PR #27 landed on main.
 
 ## Completed
 
-- Public repo `Pukujan/doc-generation-modules` created; seed commit on `main` for PR base only.
-- PCM software profile initialized (`.continuity/`, schemas/v1, github templates).
-- Product README, explore hub (register + sample features), full content adapter @ 0.5.4 / EXPECTED_MODULES=7, jev-ultrafast click-gate plan, CI workflow drafted on the task branch.
+- DGM-0001 (#1 / PR #2) — initial public scaffold merged to main (`0be0527`).
+- Public explore hub, full PCM binding, jev-ultrafast click-gate plan, CI `gates`.
 
 ## Active
 
-- DGM-0001 (#1) — initial scaffold via PR; arm squash auto-merge when `gates` is green.
+- DGM-0002 (#3) — re-pin adapter to CGM 0.5.5 @ `085aeb1`, EXPECTED_MODULES=8 + hon, writing router filenames→hon.
 
 ## Queued
 
-- After content-generation-modules PR #27 merges: bump helper pin to 0.5.5, EXPECTED_MODULES=8, enable hon filename routing.
+- Recorded jev-ultrafast live click-gate run against explore (optional proof; plan already shipped).
 
 ## Blockers
 
-- Explore FE success claims wait on a recorded jev-ultrafast gate run (plan is checked in; live OpenRouter run optional for this scaffold).
+- None for the pin bump.
 
 ## Next atomic action
 
-Push branch, open PR linking #1, enable auto-merge; confirm CGM validate VALID and CI `gates`.
+Land PR for #3 with squash auto-merge; confirm validate VALID and CI `gates` green.
