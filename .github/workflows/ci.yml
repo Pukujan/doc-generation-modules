@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       PCM_PIN: 412d190e6244ef59279ad5d60f4c7622bfb43e5f
-      CGM_PIN: 085aeb174619191f5c2a51a1f0715dd71113e386
+      CGM_PIN: c069613ca8b3e02bcf5aba1960160583537f8a3a
     steps:
       - uses: actions/checkout@v4
 
@@ -51,6 +51,9 @@ jobs:
             --root .ci-cgm \
             --adapter .content-system \
             --project-root .
+
+      - name: Confirm HSW always-on contract
+        run: python .ci-cgm/scripts/verify_hsw_applied.py --root .ci-cgm
 
       - name: Explore JS syntax
         run: |

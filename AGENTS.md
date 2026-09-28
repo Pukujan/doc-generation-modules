@@ -20,11 +20,41 @@ MUST load the named module before drafting each surface (soft router — APPLY, 
 | PR/issue titles & bodies, commit subjects/messages, non-README docs | `human-sounding-writing` (hsw) |
 | Generated artifact / asset-manifest / media basenames | `human-output-naming` (hon) |
 
-Pinned today: helper **0.5.5** @ `085aeb174619191f5c2a51a1f0715dd71113e386`, **EXPECTED_MODULES=8** including **human-output-naming**. Cross-link [content-generation-modules#26](https://github.com/Pukujan/content-generation-modules/issues/26) / [#27](https://github.com/Pukujan/content-generation-modules/pull/27); do not edit that helper from DGM.
+Pinned today: helper **0.5.7** @ c069613ca8b3e02bcf5aba1960160583537f8a3a, **EXPECTED_MODULES=8** including **human-output-naming**. Always-on HSW via acs_prompt_inject.system_block (below). Cross-link [content-generation-modules#31](https://github.com/Pukujan/content-generation-modules/pull/31); do not edit that helper from DGM.
+
+## Always-on HSW system block (CGM 0.5.7+)
+
+Paste this boot inject into every agent system prompt (source: pinned CGM docs/writing-routing.json -> acs_prompt_inject.system_block). Opt-in is forbidden.
+
+`
+CGM ALWAYS-ON WRITING RULE (every adopter that pins this helper)
+
+Before you write ANY human-facing output — including HTML reports, compare HTML/UIs, appendable HTML, PR/issue/commit prose, docs, posts, papers, or other readable artifacts — you MUST load and apply modules/human-sounding-writing/SKILL.md (hsw).
+
+This rule is always on. Opt-in is forbidden. Do not wait for a per-task, per-report, or per-HTML flag.
+
+Exceptions (only these):
+- README.md / product entry pages → load modules/writing-direction/SKILL.md instead
+- Generated artifact filenames / asset-manifest paths / media basenames / filename legends → load modules/human-output-naming/SKILL.md (hon) for basenames; visible prose inside HTML still uses hsw
+
+HTML reports, compare HTML, and compare UIs have NO skip path. An exception reason is not allowed for those surfaces.
+
+If you cannot load the skill file from the pinned CGM checkout, stop and report that — do not draft jargon-heavy or tool-dump HTML instead.
+
+Filenames: use scripts/human_filename (speakable basenames; optional safe_twin) and keep a per-feature legend. Hash may stay a separate manifest field.
+`
+
+Confirm the pin still carries the contract:
+
+`ash
+python <CGM>/scripts/verify_hsw_applied.py --root <CGM>
+`
+
 ## Validate before calling adapter work done
 
 ```bash
 python <CGM>/scripts/validate_content_system.py --root <CGM> --adapter <DGM>/.content-system --project-root <DGM>
+python <CGM>/scripts/verify_hsw_applied.py --root <CGM>
 continuity validate --root <DGM>
 continuity preflight --root <DGM>
 ```
