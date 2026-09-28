@@ -8,16 +8,25 @@
     },
     {
       "term": "human-sounding-writing (hsw)",
-      "definition": "MUST-load module for PR/issue/commit/docs and general agent prose."
+      "definition": "MUST-load / always-on for PR/issue/commit/docs/HTML and general agent prose (helper 0.5.7+; acs_prompt_inject.system_block at boot)."
     },
     {
       "term": "human-output-naming (hon)",
-      "definition": "MUST-load for generated artifact filenames, asset-manifest paths, and committed media basenames (helper 0.5.5+; EXPECTED_MODULES=8)."
+      "definition": "MUST-load for generated artifact filenames, asset-manifest paths, and committed media basenames (helper 0.5.5+; EXPECTED_MODULES=8; still required on 0.5.7)."
     }
   ],
   "files": [
-    { "path": "AGENTS.md", "role": "agent contract + writing router" },
-    { "path": ".content-system/system-version.json", "role": "helper pin 0.5.5 + 8 modules" },
-    { "path": "docs/HELPER_PINS.md", "role": "EXPECTED_MODULES=8 and pin SHA notes" }
+    {
+      "path": "AGENTS.md",
+      "role": "agent contract + writing router + always-on HSW system_block"
+    },
+    {
+      "path": ".content-system/system-version.json",
+      "role": "helper pin 0.5.7 + 8 modules"
+    },
+    {
+      "path": "docs/HELPER_PINS.md",
+      "role": "EXPECTED_MODULES=8 and pin SHA notes"
+    }
   ]
 }

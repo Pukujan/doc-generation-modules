@@ -1,15 +1,15 @@
 {
-    "schema_version":  "content-generation.asset-manifest.v1",
-    "system_version":  "0.5.5",
-    "assets":  [
-                   {
-                       "id":  "dgm-adapter-placeholder",
-                       "path":  ".content-system/assets/adapter-placeholder.txt",
-                       "role":  "documentation",
-                       "description":  "Non-narrative placeholder so the adapter validates while DGM narrative art remains deferred.",
-                       "usage":  "adapter completeness only; not a README hero",
-                       "review_decision":  "accepted-as-placeholder",
-                       "status_note":  "Replace with narrative raster under the helper image guide when root README gets art."
-                   }
-               ]
+  "schema_version": "content-generation.asset-manifest.v1",
+  "system_version": "0.5.7",
+  "assets": [
+    {
+      "id": "dgm-adapter-placeholder",
+      "path": ".content-system/assets/adapter-placeholder.txt",
+      "role": "documentation",
+      "description": "Non-narrative placeholder so the adapter validates while DGM narrative art remains deferred.",
+      "usage": "adapter completeness only; not a README hero",
+      "review_decision": "accepted-as-placeholder",
+      "status_note": "Replace with narrative raster under the helper image guide when root README gets art."
+    }
+  ]
 }
